@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FullStackDummy</title>
+    <% if content_for? :head %>
+      <%= yield :head %>
+    <% else %>
+      <title>FullStackDummy</title>
+      <meta name="description" content="A Dummy Full-stack application for testing."/>
+    <% end %>
+    
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
