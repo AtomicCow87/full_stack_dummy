@@ -1,1 +1,3 @@
-console.log('hello from home', Date.now());
+import usefulWidget from './base';
+
+usefulWidget('hello from home');
